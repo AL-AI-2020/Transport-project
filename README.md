@@ -25,7 +25,7 @@ This work consists of 4 parts:
 * 4 part. Deployment
 
 ## **Example usage**
-At the first stage, we enter the data of the area we are interested in (geographical, statistical, demographic data) and press the "Predict" button:
+At the first stage, we enter the necessary data for the area of ​​interest to us, enter geographical, statistical and demographic data) and click the “Predict” button:
 <p align="center">
   <img src="example/input_ex1.jpg" width="100%">
 </p>
