@@ -16,6 +16,9 @@ The project used Israeli data to implement machine learning models, which are pu
 5. Job density data for each zone in Israel: https://data.gov.il/dataset/2030
 6. Location data for fast train stops: https://data.gov.il/dataset/lrt_stat
 7. Location data for bus lines with a large number of passengers: https://data.gov.il/dataset/tma_23a4_lines
+8. Average speed of buses during morning rush hour: https://data.gov.il/dataset/bus_speed
+9. University layer: https://data.gov.il/dataset/universities
+    
 
 ## **Composition of the work**
 This work consists of 4 parts:
