@@ -25,7 +25,18 @@ This work consists of 4 parts:
 * 4 part. Deployment
 
 ## **Example usage**
-At the first stage, we enter the data of the area of ​​interest to us (geographical, statistical, demographic data), then we run a machine learning model to evaluate the results with additional capabilities of presenting the results on a map of the Gush Dan region.
+At the first stage, we enter the data of the area we are interested in (geographical, statistical, demographic data) and press the "Predict" button:
 <p align="center">
   <img src="example/input_ex1.jpg" width="100%">
+</p>
+
+Next, a machine learning model is run to evaluate the results, with the additional ability to present the results on a map of the Gush Dan region.
+The user receives the result in the form of a map and table of areas in Gush Dan to which the largest number of passengers will go:
+<p align="center">
+  <img src="example/input_ex2.jpg" width="100%">
+</p>
+
+It is possible to click on the map to enlarge it. You can consider the location of the districts and how many passengers will go to each district:
+<p align="center">
+  <img src="example/input_ex3.jpg" width="100%">
 </p>
