@@ -4,7 +4,7 @@
 Predict the number of passengers from one place to another during rush hour in the mornings during the week (days from Sunday to Thursday).
 
 ## **Target variable**
- Target variable -  the number of passengers traveling from one place to another (from zone A to the zone B) during the morning rush hour from 6:00-9:00 (Morning_rush_6_9).
+ **Target variable** -  the number of passengers traveling from one place to another (from zone A to the zone B) during the morning rush hour from 6:00-9:00 (Morning_rush_6_9).
 
 ## **Data used for the project**:
 The project used Israeli data to implement machine learning models, which are publicly available on the website of the government: https://data.gov.il/
@@ -19,7 +19,13 @@ The project used Israeli data to implement machine learning models, which are pu
 
 ## **Composition of the work**
 This work consists of 4 parts:
-* 1 part. [Data preparation](https://drive.google.com/file/d/1OCWdQp1afvxsl1tdVjqd-zstmljZnQbT/view?usp=drive_link)
-* 2 part. [EDA, Missing values ](https://drive.google.com/file/d/1iaYuE0qoKdeKnCVMoAXatAb4PBKePOEm/view?usp=drive_link)
-* 3 part. [Machine learning models](https://drive.google.com/file/d/13B33Y0io4-EwG45vFAv8uVgvVytkJYzm/view?usp=drive_link)
+* 1 part. Data preparation
+* 2 part. EDA, Missing values
+* 3 part. Machine learning models
 * 4 part. Deployment
+
+## **Example usage**
+At the first stage, we enter the data of the area of ​​interest to us (geographical, statistical, demographic data), then we run a machine learning model to evaluate the results with additional capabilities of presenting the results on a map of the Gush Dan region.
+<p align="center">
+  <img src="example/ex1.jpg" width="100%">
+</p>
