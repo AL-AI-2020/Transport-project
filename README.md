@@ -27,5 +27,5 @@ This work consists of 4 parts:
 ## **Example usage**
 At the first stage, we enter the data of the area of ​​interest to us (geographical, statistical, demographic data), then we run a machine learning model to evaluate the results with additional capabilities of presenting the results on a map of the Gush Dan region.
 <p align="center">
-  <img src="example/ex1.jpg" width="100%">
+  <img src="example/input_ex1.jpg" width="100%">
 </p>
