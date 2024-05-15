@@ -1,0 +1,5 @@
+In order to run this project in docker, preform the following commands:
+
+cd Project-Tahbura
+docker build . -t model_1 -f ./Dockerfile_model
+docker run -itd -v "C:/DataScience_AI/Project-Tahbura/shared_volume:/app/shared_volume" -it model_1
