@@ -1,8 +1,0 @@
- In order to run this project in docker, preform the following commands:
-
-cd Project-Tahbura
-docker build . -t forecast_1 -f ./Dockerfile_forecast
-docker run -d -v "C:/DataScience_AI/Project-Tahbura/shared_volume:/app/shared_volume" -p 8081:8081 -it forecast_1
-
-
-Then you can access http://localhost:8081/ via browser and use the application.
