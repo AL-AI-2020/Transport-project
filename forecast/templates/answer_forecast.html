@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results of forecasts</title>
+  <style>
+    /* Center text and elements by default, except navigation */
+    body {
+      text-align: center;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center; /* Center navigation horizontally */
+      margin: 20px 0;
+    }
+
+    /* Navigation bar styling (optional) */
+    .navigation button {
+      padding: 10px 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-right: 10px;
+      cursor: pointer;
+      background-color: #eee; /* Neutral background color */
+      transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+    }
+
+    .navigation button:hover {
+      background-color: #ddd; /* Subtle background color change on hover */
+    }
+
+    /* Content container for responsive layout */
+    .content {
+      display: flex;
+      flex-wrap: wrap; /* Allow content to wrap on small screens */
+    }
+
+    /* Image container to control size */
+    .image-container {
+      width: 40%; /* Adjust width as needed */
+      margin: 0 auto; /* Center image horizontally (optional for larger screens) */
+    }
+
+    /* Style the image */
+    img {
+      width: 90%; /* Display image full-width within container */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Tables for better formatting */
+    table {
+      width: 60%; /* Adjust width as needed for table */
+      margin: 20px 0;
+      border-collapse: collapse;  
+    }
+
+    th, td {
+      padding: 5px; /* Add some padding for readability */
+      border: 1px solid #ddd; /* Table border style */
+    }
+
+    /* Responsive layout for table and image */
+    @media (max-width: 768px) {
+      .image-container, table {
+        width: 95%; /* Display image and table full-width on small screens */
+      }
+    }
+    /* Style for the number of passengers heading */
+      .number-of-passengers {
+        text-align: left; 
+        margin-bottom: 10px; 
+    }
+  </style>
+</head>
+<body style="text-align: center">
+  <div class="navigation">
+    <a href="/">
+      <button>Set Initial Zone</button>
+    </a>
+    <a href="https://github.com/AL-AI-2020/Transport-project">
+      <button>ML model description</button>
+    </a>
+  </div>
+
+  <h1>Forecast results</h1>
+  <h3> Number of passengers leaving in the morning (from 6:00 to 09:00) from a given area ( {{answer}}) to the areas of Gush Dan according to a machine learning model</h3>
+
+  <div class="content">
+    <div class="image-container">
+      <p>
+        <a onclick="openImageInNewWindow()">
+          <img src="{{ url_for('static', filename='y_predict.jpg') }}" alt="map">
+        </a>
+      </p>
+    </div>
+    <div class="number-of-passengers">
+
+      <h4>Areas of Gush Dan to which the largest number of passengers travel from the area {{answer}} </h4>
+      <table>
+        <tr>
+          {% for col_name in top_df[0].keys() %}
+          <th>{{ col_name }}</th>
+          {% endfor %}
+        </tr>
+
+        {% for row in top_df %}
+        <tr>
+          {% for value in row.values() %}
+          <td>{{ value }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+
+  <p>Forecast processing was successful!</p>
+  <script>
+    function openImageInNewWindow() {
+      window.open("{{ url_for('static', filename='y_predict.jpg') }}", "_blank");
+    }
+  </script>
+</body>
+</html>

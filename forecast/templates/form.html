@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forecast Trip Count</title>
+  <style>
+    body {
+      background-color: #d4dee8;
+    }
+    .form {
+      background-color: #f8f9fa;
+      border: 1px solid #e6e6e6;
+      padding: 10px; /* Reduced padding for less top margin */
+    }
+    .location-input {
+      width: 20%; 
+    }
+    .form-control {
+      width: 25%;
+      padding: 5px 10px;
+      border: 1px solid #ced4da;
+    }
+    .form-group {
+      margin-bottom: 6px; /* Reduced margin between form groups */
+    }
+
+    h3 {
+      margin-top: 24px; /* Increased margin above h3 elements */
+      margin-bottom: 12px; /* Reduced margin below h3 elements */
+    }
+
+    button {
+      margin-top: 12px;
+      border: none; /* Remove default button border */
+      font-family: inherit; /* Use system font */
+      font-size: 16px;
+      color: #fff;
+      background-color: #8e9ffc; /* Blue background */
+      padding: 12px 20px;
+      border-radius: 4px; /* Rounded corners */
+      cursor: pointer;
+      transition: background-color 0.3s ease; /* Smooth transition for background color */
+    }
+
+    button:hover {
+      background-color: #54639e; /* Darker blue on hover */
+    }
+
+    button:active {
+      transform: translateY(2px); /* Sink the button on click */
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); /* Add a subtle shadow */
+    }
+
+    .form-group .form-control {
+      margin-right: 10px; 
+    }
+  </style>
+</head>
+<body>
+  <form class="form" action="/getForecast">
+    <fieldset>
+      <h2>Forecast of passengers for the Gush Dan area, Israel</h2> 
+      <p style="color: #6c757d;">Enter detailed information about the area to calculate the number of passengers from it to the Gush Dan areas.</p>
+      <div class="form-group">
+
+        <div style="display: flex; flex-direction: row;">
+          <label for="area">The name of the new area:</label>
+          <input type="text" id="zone_name" name="zone_name" class="form-control" margin-right: 5px; placeholder="Ex. Tel-Aviv. Kikar Ha-Medina">
+
+        </div>
+      <div class="form-group">
+        <label for="coordinates">GPS coordinates (Longitude & Latitude) of the new area:</label>
+        <div style="display: flex; flex-direction: row;">
+          <input type="number" id="longitude" name="longitude" class="form-control" margin-right: 5px; step="0.00000001" min="-180" max="180" placeholder="Ex. Tel-Aviv: 32.086777">
+          <input type="number" id="latitude" name="latitude" class="form-control"  margin-right: 5px; step="0.00000001" min="-180" max="180" placeholder="Ex. Tel-Aviv: 34.789927">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="area">Area (m2):</label>
+        <input type="number" id="area_m2" name="area_m2" class="form-control" placeholder="area in m2" >
+      </div>
+      <h3>Demographics of the new area</h3>
+      <div class="form-group">
+        <label for="population">Population & Number of workers in the new area:</label>
+        <div style="display: flex; flex-direction: row;">
+          <input type="number" id="population" name="population" class="form-control" margin-right: 5px;  max="1000000" placeholder="Population">
+          <input type="number" id="workers" name="workers" class="form-control"  margin-right: 5px; max="1000000" placeholder="Workers">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="average_Orthodox">Average Age & Level of Ultra-Orthodox Residents:</label>
+        <div style="display: flex; flex-direction: row;">
+          <input type="number" id="average_age" name="average_age" class="form-control"  margin-right: 5px; step="1" min="0" max="1000000" placeholder="Average Age">
+          <select id="level_orthodox" name="level_orthodox" class="form-control" >
+            <option value="1">A very large share</option>
+            <option value="2">Big share</option>
+            <option value="3">Average share</option>
+            <option value="4">Small share</option>
+            <option value="5">A very small share</option>
+          </select>
+        </div>
+      </div>
+      <h3>Prediction Settings</h3>
+      <div class="form-group">
+          <label for="max_zones">Maximum Zones for Prediction:</label>
+          <select id="max_zones" name="max_zones" class="form-control">
+              <option value="5">5 zones</option>
+              <option value="10">10 zones</option>
+              <option value="20">20 zones</option>
+              <option value="50">50 zones</option>
+          </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Predict</button>
+  </fieldset>
+</form>
+
+</body>
+</html>
