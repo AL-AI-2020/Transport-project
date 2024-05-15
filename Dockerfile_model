@@ -1,0 +1,8 @@
+FROM python:3.8-slim
+
+WORKDIR /app/
+COPY requirements_model.txt /app/
+RUN pip install -v -r ./requirements_model.txt
+ADD ./collector_model /app/
+
+ENTRYPOINT python /app/model_train.py

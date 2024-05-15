@@ -1,0 +1,12 @@
+matplotlib
+shapely
+numpy
+pandas
+geopandas
+scikit-learn
+pyproj
+Pillow
+seaborn
+wordcloud
+ipython
+Flask
