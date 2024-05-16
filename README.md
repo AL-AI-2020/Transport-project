@@ -27,6 +27,15 @@ This work consists of 4 parts:
 * 3 part. Machine learning models
 * 4 part. Deployment
 
+
+<p align="center">
+  <img src="example/architecture.jpg" width="100%">
+</p>
+  *Consists of 2 dockers.*
+1. *Docker1* contains Python code that receives data, processes and analyzes the data. Burns non-lost data and zeros. Runs various machine learning models with optimal hyperparameters and selects the optimal model with the best result. The final model and necessary data are saved in a shared folder.
+
+2. *Docker2* receives the model parameters, requests the user to provide the necessary area data for analysis (using Flask (framework - web applications in the Python). Launches the optimal machine learning model. Displays the result in the browser in the form of a table and map.
+
 ## **Example usage**
 At the first stage, we enter the necessary data for the area of ​​interest to us, enter geographical, statistical and demographic data) and click the “Predict” button:
 <p align="center">
