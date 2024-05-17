@@ -21,6 +21,9 @@ The project used Israeli data to implement machine learning models, which are pu
     
 
 ## **Composition of the work**
+This project uses a supervised learning approach, using algorithms and models to predict the number of trips from one zone to another zone.
+The project tested the effectiveness of algorithms and models such as Logistic Regression, Linear Regression, Decision Tree, Random Forest, Gradient Boosting, SVM, ADABoost, results optimization techniques such as Normalization and Standardization of parameters, selection of Hyperparameters for models (using GridSearchCV ) and use Cross-Validation to identify the best performing model for that prediction task.
+
 This work consists of 4 parts:
 * 1 part. Data preparation
 * 2 part. EDA, Missing values
